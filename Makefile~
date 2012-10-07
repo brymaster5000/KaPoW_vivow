@@ -4,9 +4,9 @@ PATCHLEVEL = 0
 SUBLEVEL = 18
 EXTRAVERSION = -rc1
 =======
-SUBLEVEL = 38
+SUBLEVEL = 45
 EXTRAVERSION =
->>>>>>> 947f1e5... apply patchset from 3.0.17 to 3.0.38
+>>>>>>> 343c09b... Linux 3.0.45
 NAME = Sneaky Weasel
 
 # *DOCUMENTATION*

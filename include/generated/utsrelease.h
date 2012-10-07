@@ -1,1 +1,1 @@
-#define UTS_RELEASE "3.0.18-rc1KaPoW-g667db2b-dirty"
+#define UTS_RELEASE "3.0.45KaPoW-gad2ff83-dirty"
