@@ -1,0 +1,32 @@
+--- drivers/oprofile/oprofile_files.c
++++ drivers/oprofile/oprofile_files.c
+@@ -45,7 +45,7 @@
+ 		return -EINVAL;
+ 
+ 	retval = oprofilefs_ulong_from_user(&val, buf, count);
+-	if (retval)
++	if (retval <= 0)
+ 		return retval;
+ 
+ 	retval = oprofile_set_timeout(val);
+@@ -84,7 +84,7 @@
+ 		return -EINVAL;
+ 
+ 	retval = oprofilefs_ulong_from_user(&val, buf, count);
+-	if (retval)
++	if (retval <= 0)
+ 		return retval;
+ 
+ 	retval = oprofile_set_ulong(&oprofile_backtrace_depth, val);
+@@ -141,9 +141,10 @@
+ 		return -EINVAL;
+ 
+ 	retval = oprofilefs_ulong_from_user(&val, buf, count);
+-	if (retval)
++	if (retval <= 0)
+ 		return retval;
+ 
++	retval = 0;
+ 	if (val)
+ 		retval = oprofile_start();
+ 	else

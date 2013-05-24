@@ -1,0 +1,12 @@
+--- net/sctp/protocol.c
++++ net/sctp/protocol.c
+@@ -1144,6 +1144,9 @@
+ 	sctp_max_instreams    		= SCTP_DEFAULT_INSTREAMS;
+ 	sctp_max_outstreams   		= SCTP_DEFAULT_OUTSTREAMS;
+ 
++	/* Initialize maximum autoclose timeout. */
++	sctp_max_autoclose		= INT_MAX / HZ;
++
+ 	/* Initialize handle used for association ids. */
+ 	idr_init(&sctp_assocs_id);
+ 

@@ -1,0 +1,11 @@
+--- net/sched/sch_mqprio.c
++++ net/sched/sch_mqprio.c
+@@ -106,7 +106,7 @@
+ 	if (!netif_is_multiqueue(dev))
+ 		return -EOPNOTSUPP;
+ 
+-	if (nla_len(opt) < sizeof(*qopt))
++	if (!opt || nla_len(opt) < sizeof(*qopt))
+ 		return -EINVAL;
+ 
+ 	qopt = nla_data(opt);

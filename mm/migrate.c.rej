@@ -1,0 +1,17 @@
+--- mm/migrate.c
++++ mm/migrate.c
+@@ -120,10 +120,10 @@
+ 
+ 		ptep = pte_offset_map(pmd, addr);
+ 
+-		if (!is_swap_pte(*ptep)) {
+-			pte_unmap(ptep);
+-			goto out;
+-		}
++		/*
++		 * Peek to check is_swap_pte() before taking ptlock?  No, we
++		 * can race mremap's move_ptes(), which skips anon_vma lock.
++		 */
+ 
+ 		ptl = pte_lockptr(mm, pmd);
+ 	}

@@ -1,0 +1,14 @@
+--- drivers/net/netconsole.c
++++ drivers/net/netconsole.c
+@@ -307,6 +307,11 @@
+ 		return err;
+ 	if (enabled < 0 || enabled > 1)
+ 		return -EINVAL;
++	if (enabled == nt->enabled) {
++		printk(KERN_INFO "netconsole: network logging has already %s\n",
++				nt->enabled ? "started" : "stopped");
++		return -EINVAL;
++	}
+ 
+ 	if (enabled) {	/* 1 */
+ 

@@ -1,0 +1,33 @@
+--- drivers/md/dm.c
++++ drivers/md/dm.c
+@@ -37,6 +37,8 @@
+ static unsigned int major = 0;
+ static unsigned int _major = 0;
+ 
++static DEFINE_IDR(_minor_idr);
++
+ static DEFINE_SPINLOCK(_minor_lock);
+ /*
+  * For bio-based dm.
+@@ -313,6 +315,12 @@
+ 
+ 	while (i--)
+ 		_exits[i]();
++
++	/*
++	 * Should be empty by this point.
++	 */
++	idr_remove_all(&_minor_idr);
++	idr_destroy(&_minor_idr);
+ }
+ 
+ /*
+@@ -1705,8 +1713,6 @@
+ /*-----------------------------------------------------------------
+  * An IDR is used to keep track of allocated minor numbers.
+  *---------------------------------------------------------------*/
+-static DEFINE_IDR(_minor_idr);
+-
+ static void free_minor(int minor)
+ {
+ 	spin_lock(&_minor_lock);

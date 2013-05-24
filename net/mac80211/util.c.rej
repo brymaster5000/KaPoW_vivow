@@ -1,0 +1,20 @@
+--- net/mac80211/util.c
++++ net/mac80211/util.c
+@@ -1047,6 +1047,8 @@
+ 	skb = ieee80211_probereq_get(&local->hw, &sdata->vif,
+ 				     ssid, ssid_len,
+ 				     buf, buf_len);
++	if (!skb)
++		goto out;
+ 
+ 	if (dst) {
+ 		mgmt = (struct ieee80211_mgmt *) skb->data;
+@@ -1055,6 +1057,8 @@
+ 	}
+ 
+ 	IEEE80211_SKB_CB(skb)->flags |= IEEE80211_TX_INTFL_DONT_ENCRYPT;
++
++ out:
+ 	kfree(buf);
+ 
+ 	return skb;

@@ -1,0 +1,26 @@
+--- drivers/gpu/drm/i915/i915_irq.c
++++ drivers/gpu/drm/i915/i915_irq.c
+@@ -306,12 +306,15 @@
+ 	struct drm_mode_config *mode_config = &dev->mode_config;
+ 	struct intel_encoder *encoder;
+ 
++	mutex_lock(&mode_config->mutex);
+ 	DRM_DEBUG_KMS("running encoder hotplug functions\n");
+ 
+ 	list_for_each_entry(encoder, &mode_config->encoder_list, base.head)
+ 		if (encoder->hot_plug)
+ 			encoder->hot_plug(encoder);
+ 
++	mutex_unlock(&mode_config->mutex);
++
+ 	/* Just fire off a uevent and let userspace tell us what to do */
+ 	drm_helper_hpd_irq_event(dev);
+ }
+@@ -817,6 +820,7 @@
+ 
+ 	/* Fences */
+ 	switch (INTEL_INFO(dev)->gen) {
++	case 7:
+ 	case 6:
+ 		for (i = 0; i < 16; i++)
+ 			error->fence[i] = I915_READ64(FENCE_REG_SANDYBRIDGE_0 + (i * 8));

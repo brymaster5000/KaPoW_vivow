@@ -1,0 +1,30 @@
+--- drivers/net/wireless/rt2x00/rt2800usb.c
++++ drivers/net/wireless/rt2x00/rt2800usb.c
+@@ -477,8 +477,10 @@
+ 		while (!rt2x00queue_empty(queue)) {
+ 			entry = rt2x00queue_get_entry(queue, Q_INDEX_DONE);
+ 
+-			if (test_bit(ENTRY_OWNER_DEVICE_DATA, &entry->flags))
++			if (test_bit(ENTRY_OWNER_DEVICE_DATA, &entry->flags) ||
++			    !test_bit(ENTRY_DATA_STATUS_PENDING, &entry->flags))
+ 				break;
++
+ 			if (test_bit(ENTRY_DATA_IO_FAILED, &entry->flags))
+ 				rt2x00lib_txdone_noinfo(entry, TXDONE_FAILURE);
+ 			else if (rt2x00queue_status_timeout(entry))
+@@ -876,6 +878,7 @@
+ 	{ USB_DEVICE(0x13b1, 0x0031) },
+ 	{ USB_DEVICE(0x1737, 0x0070) },
+ 	{ USB_DEVICE(0x1737, 0x0071) },
++	{ USB_DEVICE(0x1737, 0x0077) },
+ 	/* Logitec */
+ 	{ USB_DEVICE(0x0789, 0x0162) },
+ 	{ USB_DEVICE(0x0789, 0x0163) },
+@@ -1067,7 +1070,6 @@
+ 	{ USB_DEVICE(0x1740, 0x0605) },
+ 	{ USB_DEVICE(0x1740, 0x0615) },
+ 	/* Linksys */
+-	{ USB_DEVICE(0x1737, 0x0077) },
+ 	{ USB_DEVICE(0x1737, 0x0078) },
+ 	/* Logitec */
+ 	{ USB_DEVICE(0x0789, 0x0168) },

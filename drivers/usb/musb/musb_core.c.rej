@@ -1,0 +1,19 @@
+--- drivers/usb/musb/musb_core.c
++++ drivers/usb/musb/musb_core.c
+@@ -2078,8 +2078,6 @@
+ 	if (status < 0)
+ 		goto fail3;
+ 
+-	pm_runtime_put(musb->controller);
+-
+ 	status = musb_init_debugfs(musb);
+ 	if (status < 0)
+ 		goto fail4;
+@@ -2329,6 +2327,7 @@
+ 				musb->context.index_regs[i].rxhubport);
+ 		}
+ 	}
++	musb_writeb(musb_base, MUSB_INDEX, musb->context.index);
+ }
+ 
+ static int musb_suspend(struct device *dev)

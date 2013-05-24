@@ -1,0 +1,22 @@
+--- drivers/tty/serial/atmel_serial.c
++++ drivers/tty/serial/atmel_serial.c
+@@ -199,8 +199,9 @@
+ {
+ 	struct atmel_uart_port *atmel_port = to_atmel_uart_port(port);
+ 	unsigned int mode;
++	unsigned long flags;
+ 
+-	spin_lock(&port->lock);
++	spin_lock_irqsave(&port->lock, flags);
+ 
+ 	/* Disable interrupts */
+ 	UART_PUT_IDR(port, atmel_port->tx_done_mask);
+@@ -231,7 +232,7 @@
+ 	/* Enable interrupts */
+ 	UART_PUT_IER(port, atmel_port->tx_done_mask);
+ 
+-	spin_unlock(&port->lock);
++	spin_unlock_irqrestore(&port->lock, flags);
+ 
+ }
+ 

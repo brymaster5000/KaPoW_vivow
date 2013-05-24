@@ -1,0 +1,13 @@
+--- drivers/ptp/ptp_clock.c
++++ drivers/ptp/ptp_clock.c
+@@ -101,7 +101,9 @@
+ 
+ static int ptp_clock_getres(struct posix_clock *pc, struct timespec *tp)
+ {
+-	return 1; /* always round timer functions to one nanosecond */
++	tp->tv_sec = 0;
++	tp->tv_nsec = 1;
++	return 0;
+ }
+ 
+ static int ptp_clock_settime(struct posix_clock *pc, const struct timespec *tp)

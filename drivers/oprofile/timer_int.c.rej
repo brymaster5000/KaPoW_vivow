@@ -1,0 +1,10 @@
+--- drivers/oprofile/timer_int.c
++++ drivers/oprofile/timer_int.c
+@@ -110,6 +110,7 @@
+ 	ops->start = oprofile_hrtimer_start;
+ 	ops->stop = oprofile_hrtimer_stop;
+ 	ops->cpu_type = "timer";
++	printk(KERN_INFO "oprofile: using timer interrupt.\n");
+ 	return 0;
+ }
+ 

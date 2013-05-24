@@ -1,0 +1,11 @@
+--- drivers/scsi/cxgbi/cxgb3i/cxgb3i.c
++++ drivers/scsi/cxgbi/cxgb3i/cxgb3i.c
+@@ -913,7 +913,7 @@
+ 	struct t3cdev *t3dev = (struct t3cdev *)csk->cdev->lldev;
+ 
+ 	if (csk->l2t) {
+-		l2t_release(L2DATA(t3dev), csk->l2t);
++		l2t_release(t3dev, csk->l2t);
+ 		csk->l2t = NULL;
+ 		cxgbi_sock_put(csk);
+ 	}

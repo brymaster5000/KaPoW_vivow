@@ -1,0 +1,11 @@
+--- drivers/hwmon/jz4740-hwmon.c
++++ drivers/hwmon/jz4740-hwmon.c
+@@ -59,7 +59,7 @@
+ {
+ 	struct jz4740_hwmon *hwmon = dev_get_drvdata(dev);
+ 	struct completion *completion = &hwmon->read_completion;
+-	unsigned long t;
++	long t;
+ 	unsigned long val;
+ 	int ret;
+ 

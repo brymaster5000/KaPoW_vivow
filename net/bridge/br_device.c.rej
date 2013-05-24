@@ -1,0 +1,19 @@
+--- net/bridge/br_device.c
++++ net/bridge/br_device.c
+@@ -91,7 +91,6 @@
+ {
+ 	struct net_bridge *br = netdev_priv(dev);
+ 
+-	netif_carrier_off(dev);
+ 	netdev_update_features(dev);
+ 	netif_start_queue(dev);
+ 	br_stp_enable_bridge(br);
+@@ -108,8 +107,6 @@
+ {
+ 	struct net_bridge *br = netdev_priv(dev);
+ 
+-	netif_carrier_off(dev);
+-
+ 	br_stp_disable_bridge(br);
+ 	br_multicast_stop(br);
+ 
