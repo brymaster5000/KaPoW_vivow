@@ -1,9 +1,5 @@
 /*
-<<<<<<< HEAD
  * BFQ-v6r1 for 3.0: data structures and common functions prototypes.
-=======
- * BFQ-v5r1 for 3.0: data structures and common functions prototypes.
->>>>>>> 4c1965f... block: introduce the BFQ-v5r1 I/O sched for 3.0
  *
  * Based on ideas and code from CFQ:
  * Copyright (C) 2003 Jens Axboe <axboe@kernel.dk>
