@@ -124,9 +124,7 @@ choice
 
 	config DEFAULT_SIO
 		bool "SIO" if IOSCHED_SIO=y
-        
-	config DEFAULT_VR
-		bool "VR" if IOSCHED_VR=y
+
 endchoice
 
 config DEFAULT_IOSCHED
