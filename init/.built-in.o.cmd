@@ -1,1 +1,0 @@
-cmd_init/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o init/built-in.o init/main.o init/version.o init/mounts.o init/initramfs.o init/calibrate.o 

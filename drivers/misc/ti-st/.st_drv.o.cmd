@@ -1,1 +1,0 @@
-cmd_drivers/misc/ti-st/st_drv.o := /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/misc/ti-st/st_drv.o drivers/misc/ti-st/st_core.o drivers/misc/ti-st/st_kim.o drivers/misc/ti-st/st_ll.o 

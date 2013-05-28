@@ -1,4 +1,0 @@
-kernel/drivers/misc/isa1200.ko
-kernel/drivers/misc/pmic8058-pwm.ko
-kernel/drivers/misc/pm8xxx-upl.ko
-kernel/drivers/misc/ti-st/st_drv.ko

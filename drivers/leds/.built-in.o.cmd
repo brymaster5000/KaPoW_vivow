@@ -1,1 +1,0 @@
-cmd_drivers/leds/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/leds/built-in.o drivers/leds/led-core.o drivers/leds/led-class.o drivers/leds/led-triggers.o drivers/leds/leds-gpio.o drivers/leds/leds-pm8058.o drivers/leds/leds-microp.o drivers/leds/flashlight_aat1271.o 

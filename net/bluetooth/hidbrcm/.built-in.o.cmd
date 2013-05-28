@@ -1,1 +1,0 @@
-cmd_net/bluetooth/hidbrcm/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o net/bluetooth/hidbrcm/built-in.o net/bluetooth/hidbrcm/bthid.o 

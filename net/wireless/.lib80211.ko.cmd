@@ -1,1 +1,0 @@
-cmd_net/wireless/lib80211.ko := /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL -r  -T /home/bsmitty2/KaPoW_vivow/scripts/module-common.lds --build-id  -o net/wireless/lib80211.ko net/wireless/lib80211.o net/wireless/lib80211.mod.o

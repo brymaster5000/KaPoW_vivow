@@ -1,1 +1,0 @@
-cmd_drivers/video/omap2/displays/built-in.o :=  rm -f drivers/video/omap2/displays/built-in.o; /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ar rcsD drivers/video/omap2/displays/built-in.o

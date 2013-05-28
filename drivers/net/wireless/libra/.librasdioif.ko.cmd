@@ -1,1 +1,0 @@
-cmd_drivers/net/wireless/libra/librasdioif.ko := /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL -r  -T /home/bsmitty2/KaPoW_vivow/scripts/module-common.lds --build-id  -o drivers/net/wireless/libra/librasdioif.ko drivers/net/wireless/libra/librasdioif.o drivers/net/wireless/libra/librasdioif.mod.o

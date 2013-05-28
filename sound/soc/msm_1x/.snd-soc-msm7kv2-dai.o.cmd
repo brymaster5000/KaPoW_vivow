@@ -1,1 +1,0 @@
-cmd_sound/soc/msm_1x/snd-soc-msm7kv2-dai.o := /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o sound/soc/msm_1x/snd-soc-msm7kv2-dai.o sound/soc/msm_1x/msm7kv2-dai.o 

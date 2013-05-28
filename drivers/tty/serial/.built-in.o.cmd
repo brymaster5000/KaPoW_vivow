@@ -1,1 +1,0 @@
-cmd_drivers/tty/serial/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/tty/serial/built-in.o drivers/tty/serial/serial_core.o drivers/tty/serial/msm_serial.o drivers/tty/serial/msm_serial_hs.o drivers/tty/serial/msm_serial_hs_brcm.o drivers/tty/serial/msm_serial_hs_ti_dc.o 

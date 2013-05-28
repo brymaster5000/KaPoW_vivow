@@ -1,1 +1,0 @@
-cmd_drivers/net/7x30-smd/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/net/7x30-smd/built-in.o drivers/net/7x30-smd/msm_rmnet.o 

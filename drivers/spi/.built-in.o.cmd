@@ -1,1 +1,0 @@
-cmd_drivers/spi/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/spi/built-in.o drivers/spi/spi.o drivers/spi/spi_qsd.o drivers/spi/spi_aic3254.o 

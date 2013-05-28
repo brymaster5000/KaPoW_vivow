@@ -1,1 +1,0 @@
-cmd_drivers/switch/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/switch/built-in.o drivers/switch/switch_class.o drivers/switch/switch_gpio.o 

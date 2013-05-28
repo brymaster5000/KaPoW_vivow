@@ -1,1 +1,0 @@
-cmd_drivers/usb/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/usb/built-in.o drivers/usb/core/built-in.o drivers/usb/otg/built-in.o drivers/usb/storage/built-in.o drivers/usb/misc/built-in.o drivers/usb/gadget/built-in.o 
