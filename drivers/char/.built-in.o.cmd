@@ -1,0 +1,1 @@
+cmd_drivers/char/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/char/built-in.o drivers/char/mem.o drivers/char/random.o drivers/char/misc.o drivers/char/frandom.o drivers/char/apm-emulation.o drivers/char/msm_rotator.o 

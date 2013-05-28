@@ -1,0 +1,1 @@
+cmd_drivers/staging/ti-st/fm_drv.ko := /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL -r  -T /home/bsmitty2/KaPoW_vivow/scripts/module-common.lds --build-id  -o drivers/staging/ti-st/fm_drv.ko drivers/staging/ti-st/fm_drv.o drivers/staging/ti-st/fm_drv.mod.o

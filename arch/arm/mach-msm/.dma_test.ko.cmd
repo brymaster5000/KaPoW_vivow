@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-msm/dma_test.ko := /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL -r  -T /home/bsmitty2/KaPoW_vivow/scripts/module-common.lds --build-id  -o arch/arm/mach-msm/dma_test.ko arch/arm/mach-msm/dma_test.o arch/arm/mach-msm/dma_test.mod.o

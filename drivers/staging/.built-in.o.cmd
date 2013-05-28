@@ -1,0 +1,1 @@
+cmd_drivers/staging/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/staging/built-in.o drivers/staging/staging.o drivers/staging/tty/built-in.o drivers/staging/generic_serial/built-in.o drivers/staging/android/built-in.o drivers/staging/zram/built-in.o drivers/staging/ti-st/built-in.o 

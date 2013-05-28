@@ -1,0 +1,1 @@
+cmd_drivers/crypto/msm/qcedev.ko := /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL -r  -T /home/bsmitty2/KaPoW_vivow/scripts/module-common.lds --build-id  -o drivers/crypto/msm/qcedev.ko drivers/crypto/msm/qcedev.o drivers/crypto/msm/qcedev.mod.o

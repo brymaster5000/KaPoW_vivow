@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/wl12xx/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/net/wireless/wl12xx/built-in.o drivers/net/wireless/wl12xx/wl12xx_platform_data.o 

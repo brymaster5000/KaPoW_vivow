@@ -1,0 +1,1 @@
+cmd_drivers/i2c/chips/built-in.o :=  /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ld -EL    -r -o drivers/i2c/chips/built-in.o drivers/i2c/chips/akm8975.o drivers/i2c/chips/bma150.o drivers/i2c/chips/cm3628.o drivers/i2c/chips/tpa2051d3.o drivers/i2c/chips/tps65200.o 

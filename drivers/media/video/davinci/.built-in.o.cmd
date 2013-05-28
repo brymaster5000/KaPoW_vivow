@@ -1,0 +1,1 @@
+cmd_drivers/media/video/davinci/built-in.o :=  rm -f drivers/media/video/davinci/built-in.o; /home/bsmitty2/keep/android-ndk-r5b/toolchains-master/arm-eabi-linaro-4.7.3/bin/arm-eabi-ar rcsD drivers/media/video/davinci/built-in.o

@@ -1,0 +1,13 @@
+kernel/arch/arm/common/cpaccess.ko
+kernel/arch/arm/mach-msm/reset_modem.ko
+kernel/arch/arm/mach-msm/dma_test.ko
+kernel/crypto/ansi_cprng.ko
+kernel/drivers/net/wireless/libra/librasdioif.ko
+kernel/drivers/net/wireless/bcm4329_248/bcm4329.ko
+kernel/drivers/crypto/msm/qcedev.ko
+kernel/drivers/crypto/msm/qce.ko
+kernel/drivers/crypto/msm/qcrypto.ko
+kernel/drivers/staging/ti-st/fm_drv.ko
+kernel/net/wireless/cfg80211.ko
+kernel/net/wireless/lib80211.ko
+kernel/net/mac80211/mac80211.ko
